@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import LoginSignup from './Pages/LoginSignup';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Landing from './Pages/Landing';
+import Vweb from './Pages/Vweb';
+import Navbar from './Componants/Navbar/Navbar';
+import Sidebar from './Componants/Sidebar/Sidebar';
+import Rweb from './Pages/Rweb'
+import Analytic from './Pages/Analytic';
+import Category from './Pages/Category';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Landing/>}/>
+        <Route path='/login' element={<LoginSignup/>}/>
+        <Route path='/Vweb' element={<Vweb/>}/>
+        <Route path='/Rweb' element={<Rweb/>}/>
+        <Route path='/Analytic' element={<Analytic/>}/>
+        <Route path='/Category' element={<Category/>}/>
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }
