@@ -9,8 +9,8 @@ const Landing = () => {
     <div>
       <Navbar/>
       {/* {localStorage.getItem('auth-token')? */}
-            <Sidebar/>
-            {/* <LandingView/>} */}
+            {/* <Sidebar/> */}
+            <LandingView/>        
     </div>
   )
 }
